@@ -41,8 +41,8 @@ int main()  {
     rightMotor.stop();
 
     // Print something
-    myBrain.Screen.printAt(2, 30, "Ratchet, yeah bro!");
-    myBrain.playSound(vex::soundType::ratchet);
+    myBrain.Screen.printAt(2, 30, "Drivingggg");
+    myBrain.playSound(vex::soundType::doorClose);
 
     while(true) {
         // Allow other tasks to run
