@@ -39,6 +39,7 @@ int main()  {
 
     // Print something
     myBrain.Screen.printAt(2, 30, "Tada!");
+    myBrain.playSound(tada);
 
     while(true) {
         // Allow other tasks to run
