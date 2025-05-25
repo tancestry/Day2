@@ -14,8 +14,8 @@ int main()  {
     brain myBrain;
 
     // Set up left and right motors
-    motor leftMotor = motor(PORT3, 2.0, true);
-    motor rightMotor = motor(PORT2, 2.0, false);
+    motor leftMotor = motor(PORT1, 2.0, true);
+    motor rightMotor = motor(PORT6, 2.0, false);
 
     // Start those motors
     leftMotor.spin(forward, 50, percent);
@@ -32,6 +32,11 @@ int main()  {
     leftMotor.spin(forward, -50, percent);
     rightMotor.spin(forward, -50, percent);
     
+    // Let it go a bit
+    wait(2, sec);
+
+    // TODO: Then stop
+
     // Print something
     myBrain.Screen.printAt(2, 30, "Tada!");
 
