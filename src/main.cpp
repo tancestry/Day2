@@ -37,13 +37,28 @@ int main()  {
     wait(2, sec);
 
     // TODO: Then stop
+    leftMotor.stop();
+    rightMotor.stop();
 
     // Print something
-    myBrain.Screen.printAt(2, 30, "Tada!");
-    myBrain.playSound(tada);
+    myBrain.Screen.printAt(2, 30, "Ratchet, yeah bro!");
+    myBrain.playSound(vex::soundType::ratchet);
 
     while(true) {
         // Allow other tasks to run
         this_thread::sleep_for(10);
     }
 }
+
+
+
+
+
+/*————————————————————————————————————————————————————————————————————————————*/
+/*          So, anywhay I am about 9 years old and:                           */
+/*                                                                            */
+/*           Name: Kira                                                       */
+/*                                                                            */
+/*                                                                            */
+/*                                                                            */
+/*————————————————————————————————————————————————————————————————————————————*/
