@@ -1,7 +1,7 @@
 /*————————————————————————————————————————————————————————————————————————————*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
-/*    Author:       kira                                                      */
+/*    Author:       Axolotls Robotics                                                      */
 /*    Created:      5/18/2025, 3:23:38 PM                                     */
 /*    Description:  IQ2 project                                               */
 /*                                                                            */
@@ -11,7 +11,6 @@
 using namespace vex;
 
 int main()  {
-    // Here's a little change
     brain myBrain;
 
     // Set up left and right motors
@@ -37,11 +36,9 @@ int main()  {
     wait(2, sec);
 
     // TODO: Then stop
-    leftMotor.stop();
-    rightMotor.stop();
 
     // Print something
-    myBrain.Screen.printAt(2, 30, "Drivingggg");
+    myBrain.Screen.printAt(2, 30, "All done");
     myBrain.playSound(vex::soundType::doorClose);
 
     while(true) {
@@ -49,16 +46,3 @@ int main()  {
         this_thread::sleep_for(10);
     }
 }
-
-//axolotlprogramming is sigma and crazy
-
-
-
-/*————————————————————————————————————————————————————————————————————————————*/
-/*          So, anywhay I am about 9 years old and:                           */
-/*                                                                            */
-/*           Name: Kira                                                       */
-/*                              Hello hello                                   */
-/*                                                                            */
-/*                                                                            */
-/*————————————————————————————————————————————————————————————————————————————*/
