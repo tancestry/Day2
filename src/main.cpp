@@ -10,13 +10,15 @@
 
 using namespace vex;
 
-int main()  {
+void driveForward(bool comeHome = true) {
+ 
     // Here's a little change
     brain myBrain;
 
     // Set up left and right motors
-    motor leftMotor = motor(PORT1, 2.0, true);
-    motor rightMotor = motor(PORT6, 2.0, false);
+   motor leftMotor = motor(PORT1, 2.0, true);
+     motor rightMotor = motor(PORT6, 2.0, false);
+     motor strangeMotor = motor(2,2.0,true);
 
     // Start those motors
     leftMotor.spin(forward, 50, percent);
@@ -29,31 +31,43 @@ int main()  {
     leftMotor.stop();
     rightMotor.stop();
 
-    // Now go backwards
-    leftMotor.spin(forward, -50, percent);
-    rightMotor.spin(forward, -50, percent);
-    
-    // Let it go a bit
-    wait(2, sec);
+   if (comeHome == true) {
+        // Now go backwards
+        leftMotor.spin(forward, -50, percent);
+        rightMotor.spin(forward, -50, percent);
 
-    // TODO: Then stop
-    leftMotor.stop();
-    rightMotor.stop();
+        // Let it go a bit
+        wait(2, sec);
 
+        // TODO: Then stop
+        leftMotor.stop();
+        rightMotor.stop();
+    }
     // Print something
-    myBrain.Screen.printAt(2, 30, "Drivingggg");
-    myBrain.playSound(vex::soundType::doorClose);
+    myBrain.Screen.printAt(2, 30, "Ratchetttttttt!!!");
+    myBrain.playSound(vex::soundType::ratchet);
 
+}
+
+int main()  {
+    // Using a counter in a while loop
+    int i = 0;
+    while(i++ < 3) {
+        printf("Loop #%d\n", i+1);
+        driveForward();
+    }
+    driveForward(false);
     while(true) {
+        
         // Allow other tasks to run
         this_thread::sleep_for(10);
     }
 }
 
 //axolotlprogramming is sigma and crazy
-//everyone is awsome! Like @axolotlprogramming and sophief123!
+//everyone is awsome! Like @axolotlprogramming and @sophief123!!
 
-
+ 
 
 /*————————————————————————————————————————————————————————————————————————————*/
 /*          So, anywhay I am about 9 years old and:                           */
@@ -63,3 +77,7 @@ int main()  {
 /*                                                                            */
 /*                                                                            */
 /*————————————————————————————————————————————————————————————————————————————*/
+
+double banana;
+int yellow = 36;
+int answer = 2+8;
